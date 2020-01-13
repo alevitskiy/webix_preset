@@ -1,4 +1,4 @@
-const data = [
+const tasks = [
     { id: "1", task: "Task", description: "Description", unscheduled: "Unscheduled/<br>Unassigned" }
 ];
 
@@ -53,14 +53,14 @@ export const assignmentsSection = {
                                     height: 50,
                                     template(obj) {
                                         const html = `
-                    <div class="list-col-3"><span class="list-row-icon"><i class="fas fa-check"></i></span> <span style='vertical-align: top; font-weight: 500'>${obj.task}</span></div> 
+                    <div class="list-col-3"><span class="list-icon-check"><i class="fas fa-check"></i></span> <span style='vertical-align: top; font-weight: 500'>${obj.task}</span></div> 
                     <div class="list-col-3 gray">${obj.description}</div>
                     <div class="list-col-3 gray">${obj.unscheduled}</div>
                     `
                                         return html
                                     },
                                 },
-                                data: data
+                                data: tasks
                             }
                         ]
                     },

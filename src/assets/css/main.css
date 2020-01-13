@@ -2,7 +2,8 @@
     font-weight: 500;
 }
 
-.text-right{
+.text-right,
+.text-right .webix_el_box{
     text-align: right;
 }
 
