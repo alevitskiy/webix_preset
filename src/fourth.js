@@ -42,8 +42,7 @@ export const fourth = {
                 {
                     view: "label",
                     height: 50,
-                    label: "Past due invoices",
-                    borderless: true,
+                    label: "Past due invoices"
                 },
                 {
                     view: "list",
@@ -75,7 +74,6 @@ export const fourth = {
             ]
         },        
         {
-            type: "clean",
             rows: [
                 {
                     css: "list-header",
@@ -85,13 +83,11 @@ export const fourth = {
                         {
                             template: "Customer",
                             type: "clean",
-                            autoheight: true,
                             css: "gray"
                         },
                         {
                             template: "Amount/time",
                             type: "clean",
-                            autoheight: true,
                             css: "text-right gray"
                         }
                     ]

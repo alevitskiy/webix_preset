@@ -39,7 +39,7 @@
 
 .list-header{
     background-color: #f0f1f3;
-    padding: 10px 0;
+    line-height: 30px;
 }
 
 .list-header .webix_template{    

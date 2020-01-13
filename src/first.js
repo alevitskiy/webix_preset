@@ -39,7 +39,6 @@ export const first = {
                     view: "label",
                     height: 50,
                     label: "Recomended actions",
-                    borderless: true,
                 }
             ]
         },

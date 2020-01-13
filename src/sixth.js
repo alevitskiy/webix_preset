@@ -11,13 +11,11 @@ export const sixth = {
                 {
                     view: "label",
                     height: 50,
-                    label: "Today's hours",
-                    borderless: true,
+                    label: "Today's hours"
                 }
             ]
         },
         {
-            type: "clean",
             rows: [
                 {
                     css: "list-header",
@@ -28,12 +26,10 @@ export const sixth = {
                             template: "Name",
                             type: "clean",
                             css: "gray",
-                            autoheight: true
                         },
                         {
                             template: "Time",
                             type: "clean",
-                            autoheight: true,
                             css: "text-right gray"
                         }
                     ]

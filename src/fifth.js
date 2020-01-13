@@ -35,8 +35,7 @@ export const fifth = {
                 {
                     view: "label",
                     height: 50,
-                    label: "Upcoming Jobs",
-                    borderless: true,
+                    label: "Upcoming Jobs"
                 },
                 {
                     view: "list",
@@ -68,7 +67,6 @@ export const fifth = {
             ]
         },
         {
-            type: "clean",
             rows: [
                 {
                     css: "list-header",
@@ -78,13 +76,11 @@ export const fifth = {
                         {
                             template: "Customer",
                             type: "clean",
-                            autoheight: true,
                             css: "gray"
                         },
                         {
                             template: "Amount/time",
                             type: "clean",
-                            autoheight: true,
                             css: "text-right gray"
                         }
                     ]

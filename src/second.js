@@ -3,6 +3,9 @@ const data = [
 ];
 export const second = {
     type: "section",
+    padding: {
+        top: 5
+    },
     rows: [
         {
             paddingX: 20,
@@ -11,7 +14,6 @@ export const second = {
                     view: "label",
                     height: 50,
                     label: "Assignements",
-                    borderless: true
                 }
             ]
         },
@@ -23,15 +25,14 @@ export const second = {
                 rows: [
                     {
                         css: "list-header orange",
-                        type: "clean",
+                        height: 30,
                         padding: {
                             left: 20
                         },
-                        cols: [
+                        rows: [
                             {
                                 template: "Unscheduled",
                                 type: "clean",
-                                autoheight: true
                             }
                         ]                        
                     },
@@ -45,8 +46,10 @@ export const second = {
                                 view: "list",
                                 scroll: false,
                                 borderless: true,
+                                autoheight: true,
                                 css: "custom-list-2",
                                 type: {
+                                    height: 50,
                                     template(obj) {
                                         const html = `
                     <div class="list-col-3"><span class="list-row-icon"><i class="fas fa-check"></i></span> <span style='vertical-align: top; font-weight: 500'>${obj.task}</span></div> 

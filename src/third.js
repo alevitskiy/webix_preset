@@ -19,8 +19,7 @@ export const third = {
                 {
                     view: "label",
                     height: 50,
-                    label: "Outstanding balances",
-                    borderless: true
+                    label: "Outstanding balances"
                 }
             ]
         },
@@ -65,7 +64,6 @@ export const third = {
             ]
         },
         {
-            type: "clean",
             rows: [
                 {
                     css: "list-header",
@@ -75,13 +73,11 @@ export const third = {
                         {
                             template: "Customer",
                             type: "clean",
-                            autoheight: true,
                             css: "gray"
                         },
                         {
                             template: "Amount",
                             type: "clean",
-                            autoheight: true,
                             css: "text-right gray"
                         }
                     ]
