@@ -1,0 +1,161 @@
+.semi-bold{
+    font-weight: 500;
+}
+
+.text-right{
+    text-align: right;
+}
+
+.text-center,
+.text-center .webix_el_box{
+    text-align: center;
+}
+
+.uppercase .webix_el_box{
+    text-transform: uppercase;
+}
+
+.gray,
+.gray .webix_el_box{
+    color: #818181;
+}
+
+.font-16{
+    font-size: 16px;
+}
+
+.main-label .webix_el_box{
+    font-size: 16px;
+}
+
+.top-button .webix_button,
+.top-button .webix_button:focus{
+    background-color: #3357e4;
+    color: #fff;
+}
+
+.top-button .webix_button:hover,
+.top-button .webix_button:active{
+    background-color: #3357e4;
+    color: #fff;
+    box-shadow: inset 0 0 5px  rgba(0, 0, 0, 0.5);
+}
+
+.top-button .webix_button .webix_icon{
+    color: #fff;
+}
+
+.item-violet{
+    color: #6776e7;
+}
+
+.item-violet .list-item-icon{
+    background-color: #e9eefe;
+}
+
+.item-red,
+.item-red .webix_el_box{
+    color: #fd4b51;
+}
+
+.item-red .list-item-icon{
+    background-color: #ffdbdc;
+}
+
+.item-green{
+    color: #52c083;
+}
+
+.item-green .list-item-icon{
+    background-color: #e3faef;
+}
+
+.item-orange{
+    color: #faa57b;
+}
+
+.item-orange .list-item-icon{
+    background-color: #fff5e9;
+}
+
+.item-blue{
+    color: #5095e0;
+}
+
+.item-blue .list-item-icon{
+    background-color: #e1f0fe;
+}
+
+.num-large .webix_el_box{
+    font-size: 21px;
+}
+
+.label-secondary,
+.label-secondary > .webix_el_box{    
+    font-size: 11px;
+    padding-bottom: 0;
+}
+
+.section-bottom-button .webix_button span,
+.section-bottom-button .webix_button .webix_icon{
+    color: #313131;
+    font-size: 14px;
+}
+
+.section-bottom-button .webix_button .webix_icon{
+    transition: transform .1s ease-in-out;
+}
+
+.section-bottom-button .webix_button,
+.section-bottom-button .webix_button:focus,
+.section-bottom-button .webix_button:active,
+.section-bottom-button .webix_button:hover{
+    background-color: transparent;
+}
+
+.section-bottom-button .webix_button:active .webix_icon,
+.section-bottom-button .webix_button:hover .webix_icon{
+    transform: translateX(4px);
+}
+
+.color-item{
+    display: inline-block;
+    min-width: 80px;
+    padding: 5px 10px;
+
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+}
+
+.color-red{
+    background-color: #e95567;
+}
+
+.color-yellow{
+    background-color: #ffcc30;
+}
+
+.color-blue{
+    background-color: #5095e0 ;
+}
+
+.color-green{
+    background-color: #40e48a;
+}
+
+.color-bright-blue{
+    background-color: #2b6ce4;
+}
+
+.color-gray{
+    background-color: #adb9c4;
+}
+
+.webix_el_icon .webix_disabled{
+    cursor: default;
+}

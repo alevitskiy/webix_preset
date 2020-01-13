@@ -1,0 +1,26 @@
+.custom-list .webix_list_item{
+    border-bottom: none;
+    line-height: 50px;
+    
+    padding: 2px 0;
+}
+
+.custom-list .webix_arrow_icon{
+    color: #959595;
+
+    right: 0;
+}
+
+.list-item-icon{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    vertical-align: middle;
+
+    margin-right: 10px;
+    line-height: 30px;
+
+    border-radius: 30px;
+    box-sizing: border-box;
+}
