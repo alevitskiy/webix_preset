@@ -49,8 +49,10 @@ export const fourth = {
                     view: "list",
                     scroll: false,
                     borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
                     type: {
-                        templateStart: "<div webix_l_id='#id#' class='list-row'>",
+                        height: 50,
                         template(obj) {
                             const html =
                                 `
@@ -66,8 +68,7 @@ export const fourth = {
         <div class="list-col-2 text-right"> <span class="color-item color-${obj.color}"> ${obj.num} </span> </div>
         `
                             return html
-                        },
-                        templateEnd: "</div>"
+                        }
                     },
                     data: data,
                 },
@@ -78,6 +79,7 @@ export const fourth = {
             rows: [
                 {
                     css: "list-header",
+                    height: 30,
                     paddingX: 20,
                     cols: [
                         {
@@ -93,38 +95,40 @@ export const fourth = {
                             css: "text-right gray"
                         }
                     ]
-                },
-                {
-                    paddingX: 20,
-                    padding: {
-                        top: 10
-                    },
-                    cols: [
-                        {
-                            view: "list",
-                            scroll: false,
-                            borderless: true,
-                            type: {
-                                templateStart: "<div webix_l_id='#id#' class='list-row'>",
-                                template(obj) {
-                                    const html =
-                                        `
-                <div class="list-col-2 semi-bold"> ${obj.customer}</div>
-                <div class="list-col-2 text-right">
-                <div class="semi-bold">$ ${obj.sum}</div>
-                <div style="padding-top:5px">${obj.ago} months ago</div>
-                </div>
-                `
-                                    return html
-                                },
-                                templateEnd: "</div>"
-                            },
-                            data: data2
-                        }
-                    ]
-                },
+                }
             ]
         },
+        {
+            paddingX: 20,
+            padding: {
+                top: 10
+            },
+            cols: [
+                {
+                    view: "list",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
+                    type: {
+                        height: 50,
+                        template(obj) {
+                            const html =
+                                `
+        <div class="list-col-2 semi-bold"> ${obj.customer}</div>
+        <div class="list-col-2 text-right">
+        <div class="semi-bold">$ ${obj.sum}</div>
+        <div style="padding-top:5px">${obj.ago} months ago</div>
+        </div>
+        `
+                            return html
+                        }
+                    },
+                    data: data2
+                }
+            ]
+        },
+        {},
         {
             view: "button",
             type: "icon",

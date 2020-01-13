@@ -31,47 +31,52 @@ export const first = {
         top: 5,
         bottom: 10
     },
-    paddingX: 20,
     rows: [
         {
+            paddingX: 20,
             rows: [
                 {
                     view: "label",
                     height: 50,
                     label: "Recomended actions",
                     borderless: true,
-                },
+                }
             ]
         },
         {
-            view: "grouplist",
-            scroll: false,
-            borderless: true,
-            autoheight: true,
-            data: data,
-            css: "custom-list",
-            item: {
-                height: 50,
-                template(obj) {
-                    var html;
-
-                    if(obj.$level != 1){
-                        html = obj.value
-                    } else {
-                        html = `
-                        <span class="${obj.class}">
-                            <span class="list-item-icon">
-                                <span class="${obj.icon}"></span> 
-                            </span>
-                            
-                            <strong>${obj.num}</strong>
-                        </span> -  ${obj.value}
-                        `;
-                    }                    
-                    return html
+            paddingX: 10,
+            rows: [
+                {
+                    view: "grouplist",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    data: data,
+                    css: "custom-list",
+                    item: {
+                        height: 50,
+                        template(obj) {
+                            var html;        
+                            if(obj.$level != 1){
+                                html = obj.value
+                            } else {
+                                html = `
+                                <span class="${obj.class}">
+                                    <span class="list-item-icon">
+                                        <span class="${obj.icon}"></span> 
+                                    </span>
+                                    
+                                    <strong>${obj.num}</strong>
+                                </span> -  ${obj.value}
+                                `;
+                            }                    
+                            return html
+                        }
+                    }
                 }
-            }
-        }
+            ]
+        },
+        {}
     ],
 }
 

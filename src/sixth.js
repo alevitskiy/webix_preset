@@ -21,6 +21,7 @@ export const sixth = {
             rows: [
                 {
                     css: "list-header",
+                    height: 30,
                     paddingX: 20,
                     cols: [
                         {
@@ -36,26 +37,26 @@ export const sixth = {
                             css: "text-right gray"
                         }
                     ]
-                },
+                }
+            ]
+        },        
+        {},
+        {
+            cols: [
                 {},
                 {
-                    cols: [
-                        {},
-                        {
-                            view: "icon",
-                            icon: "far fa-clock",
-                            disabled: true
-                        },
-                        {}
-                    ]
-                },
-                {
-                    template: "No time entries today",
-                    borderless: true,
-                    css: "text-center"
+                    view: "icon",
+                    icon: "far fa-clock",
+                    disabled: true
                 },
                 {}
             ]
-        }
+        },
+        {
+            template: "No time entries today",
+            borderless: true,
+            css: "text-center"
+        },
+        {}
     ]
 }

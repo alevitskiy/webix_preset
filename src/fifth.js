@@ -42,8 +42,10 @@ export const fifth = {
                     view: "list",
                     scroll: false,
                     borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
                     type: {
-                        templateStart: "<div webix_l_id='#id#' class='list-row'>",
+                        height: 50,
                         template(obj) {
                             const html =
                                 `
@@ -59,8 +61,7 @@ export const fifth = {
         <div class="list-col-2 text-right"> <span class="color-item color-${obj.color}"> ${obj.label} </span> </div>
         `
                             return html
-                        },
-                        templateEnd: "</div>"
+                        }
                     },
                     data: data,
                 },
@@ -71,6 +72,7 @@ export const fifth = {
             rows: [
                 {
                     css: "list-header",
+                    height: 30,
                     paddingX: 20,
                     cols: [
                         {
@@ -86,27 +88,28 @@ export const fifth = {
                             css: "text-right gray"
                         }
                     ]
-                },
+                }
+
+            ]
+        },
+        {},
+        {
+            cols: [
                 {},
                 {
-                    cols: [
-                        {},
-                        {
-                            view: "icon",
-                            icon: "fas fa-briefcase",
-                            disabled: true
-                        },
-                        {}
-                    ]
-                },
-                {
-                    template: "No upcoming jobs",
-                    borderless: true,
-                    css: "text-center"
+                    view: "icon",
+                    icon: "fas fa-briefcase",
+                    disabled: true
                 },
                 {}
             ]
         },
+        {
+            template: "No upcoming jobs",
+            borderless: true,
+            css: "text-center"
+        },
+        {},
         {
             view: "button",
             type: "icon",

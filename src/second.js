@@ -37,15 +37,16 @@ export const second = {
                     },
                     {
                         padding: {
-                            left: 20
+                            left: 20,
+                            top: 5
                         },
                         cols: [
                             {
                                 view: "list",
                                 scroll: false,
-                                data: data,
+                                borderless: true,
+                                css: "custom-list-2",
                                 type: {
-                                    templateStart: "<div class='list-row'>",
                                     template(obj) {
                                         const html = `
                     <div class="list-col-3"><span class="list-row-icon"><i class="fas fa-check"></i></span> <span style='vertical-align: top; font-weight: 500'>${obj.task}</span></div> 
@@ -54,11 +55,12 @@ export const second = {
                     `
                                         return html
                                     },
-                                    templateEnd: "</div>"
-                                }
+                                },
+                                data: data
                             }
                         ]
-                    }
+                    },
+                    {}
                 ]
             }
         }

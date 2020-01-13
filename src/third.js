@@ -70,11 +70,12 @@ export const third = {
             rows: [
                 {
                     css: "list-header",
+                    height: 30,
                     paddingX: 20,
                     cols: [
                         {
                             template: "Customer",
-                            type: "clean",                            
+                            type: "clean",
                             autoheight: true,
                             css: "gray"
                         },
@@ -86,34 +87,36 @@ export const third = {
                         }
                     ]
                 },
+            ]
+        },        
+        {
+            paddingX: 20,
+            padding: {
+                top: 10
+            },
+            cols: [
                 {
-                    paddingX: 20,
-                    padding: {
-                        top: 10
-                    },
-                    cols: [
-                        {
-                            view: "list",
-                            scroll: false,
-                            borderless: true,
-                            type: {
-                                templateStart: "<div webix_l_id='#id#' class='list-row'>",
-                                template(obj) {
-                                    const html = 
-                                        `
+                    view: "list",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
+                    type: {
+                        height: 40,
+                        template(obj) {
+                            const html =
+                                `
                 <div class="list-col-2 semi-bold"> ${obj.name}</div>
                 <div class="list-col-2 semi-bold text-right">$ - ${obj.amount}</div>
                 `
-                                    return html
-                                },
-                                templateEnd: "</div>"
-                            },
-                            data: data
+                            return html
                         }
-                    ]
-                },
+                    },
+                    data: data
+                }
             ]
         },
+        {},
         {
             view: "button",
             type: "icon",
