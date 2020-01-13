@@ -1,28 +1,35 @@
 const data = [
     {
-        id: "5.1",
-        sum: "0",
-        jobs: "0",
-        color: "green",
-        label: "Next 7 Days"
+        id: "4.1",
+        sum: "1,353",
+        invoice: "5",
+        color: "red",
+        num: "60+"
     },
     {
-        id: "5.2",
+        id: "4.2",
         sum: "0",
-        jobs: "0",
-        color: "bright-blue",
-        label: "8-14 days"
+        invoice: "0",
+        color: "yellow",
+        num: "30-40"
     },
     {
-        id: "5.3",
-        sum: "0",
-        jobs: "0",
-        color: "gray",
-        label: "Unscheduled"
+        id: "4.3",
+        sum: "495",
+        invoice: "2",
+        color: "blue",
+        num: "<30"
     }
 ]
 
-export const fifth = {
+const data2 = [
+    {id: "4.2.1", customer: "Thrift Auto Parts", sum: "625", ago: "8"},
+    {id: "4.2.2", customer: "David Lynch", sum: "104", ago: "7"},
+    {id: "4.2.3", customer: "Willie Gonzalez", sum: "100", ago: "7"},
+
+]
+
+export const invoicesSection = {
     type: "section",
     padding: {
         top: 5,
@@ -35,7 +42,7 @@ export const fifth = {
                 {
                     view: "label",
                     height: 50,
-                    label: "Upcoming Jobs"
+                    label: "Past due invoices"
                 },
                 {
                     view: "list",
@@ -54,10 +61,10 @@ export const fifth = {
         </div>
         
         <div class= "label-secondary gray">
-                            ${obj.jobs} invoices
+                            ${obj.invoice} invoices
         </div>
          </div>
-        <div class="list-col-2 text-right"> <span class="color-item color-${obj.color}"> ${obj.label} </span> </div>
+        <div class="list-col-2 text-right"> <span class="color-item color-${obj.color}"> ${obj.num} </span> </div>
         `
                             return html
                         }
@@ -65,7 +72,7 @@ export const fifth = {
                     data: data,
                 },
             ]
-        },
+        },        
         {
             rows: [
                 {
@@ -85,31 +92,43 @@ export const fifth = {
                         }
                     ]
                 }
-
             ]
         },
-        {},
         {
+            paddingX: 20,
+            padding: {
+                top: 10
+            },
             cols: [
-                {},
                 {
-                    view: "icon",
-                    icon: "fas fa-briefcase",
-                    disabled: true
-                },
-                {}
+                    view: "list",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
+                    type: {
+                        height: 50,
+                        template(obj) {
+                            const html =
+                                `
+        <div class="list-col-2 semi-bold"> ${obj.customer}</div>
+        <div class="list-col-2 text-right">
+        <div class="semi-bold">$ ${obj.sum}</div>
+        <div style="padding-top:5px">${obj.ago} months ago</div>
+        </div>
+        `
+                            return html
+                        }
+                    },
+                    data: data2
+                }
             ]
-        },
-        {
-            template: "No upcoming jobs",
-            borderless: true,
-            css: "text-center"
         },
         {},
         {
             view: "button",
             type: "icon",
-            label: "<span>View All Jobs</span><span class='webix_icon wxi-angle-right'></span>",
+            label: "<span>View All Invoices</span><span class='webix_icon wxi-angle-right'></span>",
             css: "section-bottom-button"
         }
     ]

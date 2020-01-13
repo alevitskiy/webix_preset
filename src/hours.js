@@ -1,4 +1,4 @@
-export const sixth = {
+export const hoursSection = {
     type: "section",
     padding: {
         top: 5,

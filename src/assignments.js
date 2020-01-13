@@ -1,7 +1,8 @@
 const data = [
     { id: "1", task: "Task", description: "Description", unscheduled: "Unscheduled/<br>Unassigned" }
 ];
-export const second = {
+
+export const assignmentsSection = {
     type: "section",
     padding: {
         top: 5

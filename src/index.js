@@ -6,12 +6,12 @@ import "./assets/css/list.css";
 import "./assets/css/main.css";
 
 //JS
-import {first} from "./first.js";
-import {second} from "./second.js";
-import {third} from "./third.js";
-import {fourth} from "./fourth.js";
-import {fifth} from "./fifth.js";
-import {sixth} from "./sixth.js";
+import {actionsSection} from "./actions.js";
+import {assignmentsSection} from "./assignments.js";
+import {balancesSection} from "./balances.js";
+import {invoicesSection} from "./invoices.js";
+import {jobsSection} from "./jobs.js";
+import {hoursSection} from "./hours.js";
 
 webix.ui({
     padding: 10,
@@ -37,17 +37,17 @@ webix.ui({
         {
             margin: 20,
             cols: [
-                first,
-                second
+                actionsSection,
+                assignmentsSection
             ]
         },
         {
             margin: 20,
             cols: [
-                third,
-                fourth,
-                fifth,
-                sixth
+                balancesSection,
+                invoicesSection,
+                jobsSection,
+                hoursSection
             ]
         }
     ]

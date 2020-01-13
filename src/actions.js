@@ -25,7 +25,7 @@ const data = [
     ] },
 ]
 
-export const first = {
+export const actionsSection = {
     type: "section",
     padding: {
         top: 5,

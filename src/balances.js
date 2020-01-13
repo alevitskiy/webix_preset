@@ -5,7 +5,7 @@ const data = [
     { id: "3.4", name: "Earl Devaney", amount: "571" }
 ]
 
-export const third = {
+export const balancesSection = {
     type: "section",
     autoheight: true,
     padding: {
