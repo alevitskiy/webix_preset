@@ -15,7 +15,7 @@ export const third = {
     rows: [
         {
             paddingX: 20,
-            cols: [
+            rows: [
                 {
                     view: "label",
                     height: 50,
@@ -31,7 +31,6 @@ export const third = {
             },
             cols: [
                 {
-                    borderless: "true",
                     rows: [
                         {
                             view: "label",

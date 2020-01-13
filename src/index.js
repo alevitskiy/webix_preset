@@ -14,8 +14,9 @@ import {fifth} from "./fifth.js";
 import {sixth} from "./sixth.js";
 
 webix.ui({
-    padding: 20,
+    padding: 10,
     type: "wide",
+    margin: 20,
     rows: [
         {
             cols: [
@@ -40,7 +41,6 @@ webix.ui({
                 second
             ]
         },
-        {height: 10},
         {
             margin: 20,
             cols: [

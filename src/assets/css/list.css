@@ -52,12 +52,6 @@
     color: #ff8e80;
 }
 
-.list-row{
-    font-size: 0;
-    letter-spacing: 0;
-    padding: 7px 0;
-}
-
 .list-col-3{
     display: inline-block;
     box-sizing: border-box;
