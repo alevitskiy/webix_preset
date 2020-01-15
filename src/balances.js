@@ -10,7 +10,6 @@ export const balancesSection = {
     autoheight: true,
     padding: {
         top: 5,
-        bottom: 10
     },
     rows: [
         {
@@ -35,7 +34,7 @@ export const balancesSection = {
                             view: "label",
                             label: "$-9,044",
                             height: 32,
-                            css: "num-large item-red"
+                            css: "font-18 item-red"
                         },
                         {
                             view: "label",
@@ -51,7 +50,7 @@ export const balancesSection = {
                             view: "label",
                             label: "8",
                             height: 32,
-                            css: "text-right num-large gray"
+                            css: "text-right font-18 gray"
                         },
                         {
                             view: "label",
@@ -116,7 +115,7 @@ export const balancesSection = {
             view: "button",
             type: "icon",
             label: "<span>View All Customers</span><span class='webix_icon wxi-angle-right'></span>",
-            css: "section-bottom-button"
+            css: "webix_transparent"
         }
     ]
 }

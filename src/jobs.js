@@ -25,8 +25,7 @@ const data = [
 export const jobsSection = {
     type: "section",
     padding: {
-        top: 5,
-        bottom: 10
+        top: 5
     },
     rows: [
         {
@@ -110,7 +109,7 @@ export const jobsSection = {
             view: "button",
             type: "icon",
             label: "<span>View All Jobs</span><span class='webix_icon wxi-angle-right'></span>",
-            css: "section-bottom-button"
+            css: "webix_transparent"
         }
     ]
 }

@@ -23,13 +23,13 @@ webix.ui({
                 {
                     view: "label",
                     label: "Activities of  the day",
-                    css: "main-label"
+                    css: "font-16"
                 },
                 {
                     view: "button",
                     width: 150,
                     align: "right",
-                    css: "top-button",
+                    css: "webix_primary",
                     label: "<span>Quick Actions</span><span class='webix_icon wxi-angle-down'></span>"
                 }
             ]
