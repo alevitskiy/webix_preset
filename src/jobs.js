@@ -1,25 +1,29 @@
 const data = [
     {
         id: "5.1",
-        sum: "0",
-        jobs: "0",
+        sum: "544",
+        jobs: "3",
         color: "green",
-        label: "Next 7 Days"
+        label: "Next 2 Days"
     },
     {
         id: "5.2",
-        sum: "0",
-        jobs: "0",
+        sum: "100",
+        jobs: "1",
         color: "bright-blue",
-        label: "8-14 days"
+        label: "Next 2 Days"
     },
     {
         id: "5.3",
-        sum: "0",
+        sum: "124",
         jobs: "0",
         color: "gray",
-        label: "Unscheduled"
+        label: "Next 2 Days"
     }
+]
+
+const data2 = [
+    { id: "5.1.1", customer: "Alex Smith", hours: "1" },
 ]
 
 export const jobsSection = {
@@ -87,22 +91,37 @@ export const jobsSection = {
 
             ]
         },
-        {},
         {
+            paddingX: 20,
+            padding: {
+                top: 10
+            },
             cols: [
-                {},
                 {
-                    view: "icon",
-                    icon: "fas fa-briefcase",
-                    disabled: true
-                },
-                {}
+                    view: "list",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
+                    type: {
+                        height: 50,
+                        template(obj) {
+                            const html =
+                                `
+                                    <div class="list-col-2 semi-bold"> 
+                                        ${obj.customer}
+                                    </div>
+
+                                    <div class="list-col-2 text-right semi-bold"> 
+                                    ${obj.hours} h 
+                                    </div>
+                                `
+                            return html
+                        }
+                    },
+                    data: data2
+                }
             ]
-        },
-        {
-            template: "No upcoming jobs",
-            borderless: true,
-            css: "text-center"
         },
         {},
         {

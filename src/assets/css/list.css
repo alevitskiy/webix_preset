@@ -51,6 +51,8 @@
     box-sizing: border-box;
     width: 33.3333333%;
 
+    padding-right: 10px;
+
     vertical-align: top;
 
     font-size: 14px;
@@ -67,6 +69,12 @@
 }
 
 .list-icon-check{
+    display: block;
+    float: left;
+}
+
+.list-icon-check i{
+    line-height: 1.8;
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -79,8 +87,4 @@
 
     color: #fff;
     background-color: #52c083;
-}
-
-.list-icon-check i{
-    line-height: 1.8;
 }

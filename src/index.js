@@ -30,7 +30,7 @@ webix.ui({
                     width: 150,
                     align: "right",
                     css: "webix_primary",
-                    label: "<span>Quick Actions</span><span class='webix_icon wxi-angle-down'></span>"
+                    label: "<span>Assignements</span><span class='webix_icon wxi-angle-down'></span>"
                 }
             ]
         },

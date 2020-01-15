@@ -1,8 +1,10 @@
 const data = [
-    { id: "3.1", name: "Barbara Bradford", amount: "165" },
-    { id: "3.2", name: "Company", amount: "102" },
-    { id: "3.3", name: "David Lynch", amount: "252" },
-    { id: "3.4", name: "Earl Devaney", amount: "571" }
+    { id: "3.1", name: "Alex Smith", amount: "497" },
+    { id: "3.2", name: "Henry Jones", amount: "189" },
+    { id: "3.3", name: "Geoffrey Anderson", amount: "421" },
+    { id: "3.4", name: "John Moore", amount: "231" },
+    { id: "3.5", name: "William Thompson", amount: "562" },
+    { id: "3.6", name: "Jane Clark", amount: "135" }
 ]
 
 export const balancesSection = {
@@ -32,7 +34,7 @@ export const balancesSection = {
                     rows: [
                         {
                             view: "label",
-                            label: "$-9,044",
+                            label: "$-2,035",
                             height: 32,
                             css: "font-18 item-red"
                         },
@@ -48,7 +50,7 @@ export const balancesSection = {
                     rows: [
                         {
                             view: "label",
-                            label: "8",
+                            label: "6",
                             height: 32,
                             css: "text-right font-18 gray"
                         },

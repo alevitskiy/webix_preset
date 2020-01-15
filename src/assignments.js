@@ -1,5 +1,8 @@
 const tasks = [
-    { id: "1", task: "Task", description: "Description", unscheduled: "Unscheduled/<br>Unassigned" }
+    { id: "1", task: "Task", description: "Description", unscheduled: "Unscheduled/<br>Unassigned", css: "semi-bold" },
+    { id: "2", task: "Check email notification", description: "Sort all Letters by Importance", unscheduled: "Twice a day", css: "" },
+    { id: "3", task: "Collect documents for business meetings", description: "Request information from an accountant", unscheduled: "Accountant, Lawyer", css: "" },
+    { id: "4", task: "Meeting in conference hall", description: "Take all the necessary information for the meeting", unscheduled: "Secretary", css: "" }
 ];
 
 export const assignmentsSection = {
@@ -53,9 +56,9 @@ export const assignmentsSection = {
                                     height: 50,
                                     template(obj) {
                                         const html = `
-                    <div class="list-col-3"><span class="list-icon-check"><i class="fas fa-check"></i></span> <span style='vertical-align: top; font-weight: 500'>${obj.task}</span></div> 
-                    <div class="list-col-3 gray">${obj.description}</div>
-                    <div class="list-col-3 gray">${obj.unscheduled}</div>
+                    <div class="list-col-3 ${obj.css}"><span class="list-icon-check"><i class="fas fa-check"></i></span> <span '>${obj.task}</span></div> 
+                    <div class="list-col-3 ${obj.css}">${obj.description}</div>
+                    <div class="list-col-3 ${obj.css}">${obj.unscheduled}</div>
                     `
                                         return html
                                     },

@@ -1,32 +1,32 @@
 const data = [
     {
         id: "4.1",
-        sum: "1,353",
-        invoice: "5",
+        sum: "1,044",
+        invoice: "3",
         color: "red",
-        num: "60+"
+        num: "50+"
     },
     {
         id: "4.2",
-        sum: "0",
-        invoice: "0",
+        sum: "100",
+        invoice: "1",
         color: "yellow",
-        num: "30-40"
+        num: "20-30"
     },
     {
         id: "4.3",
-        sum: "495",
-        invoice: "2",
+        sum: "324",
+        invoice: "0",
         color: "blue",
-        num: "<30"
+        num: "<20"
     }
 ]
 
 const data2 = [
-    {id: "4.2.1", customer: "Thrift Auto Parts", sum: "625", ago: "8"},
-    {id: "4.2.2", customer: "David Lynch", sum: "104", ago: "7"},
-    {id: "4.2.3", customer: "Willie Gonzalez", sum: "100", ago: "7"},
-
+    {id: "4.2.1", customer: "Alex Smith", sum: "300", ago: "6"},
+    {id: "4.2.2", customer: "Henry Jones", sum: "100", ago: "5"},
+    {id: "4.2.3", customer: "Geoffrey Anderson", sum: "221", ago: "7"},
+    {id: "4.2.4", customer: "Jane Clark", sum: "479", ago: "3"}
 ]
 
 export const invoicesSection = {
@@ -101,7 +101,7 @@ export const invoicesSection = {
             cols: [
                 {
                     view: "list",
-                    scroll: false,
+                    scroll: "auto",
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",

@@ -1,3 +1,12 @@
+const data2 = [
+    {id: "6.1", customer: "Alex Smith", hours: "1"},
+    {id: "6.2", customer: "Henry Jones", hours: "3"},
+    {id: "6.3", customer: "Geoffrey Anderson", hours: "2.5"},
+    {id: "6.4", customer: "John Moore", hours: "4"},
+    {id: "6.5", customer: "William Thompson", hours: "1"},
+    {id: "6.6", customer: "Jane Clark", hours: ""}
+]
+
 export const hoursSection = {
     type: "section",
     padding: {
@@ -35,23 +44,38 @@ export const hoursSection = {
                     ]
                 }
             ]
-        },        
-        {},
-        {
-            cols: [
-                {},
-                {
-                    view: "icon",
-                    icon: "far fa-clock",
-                    disabled: true
-                },
-                {}
-            ]
         },
         {
-            template: "No time entries today",
-            borderless: true,
-            css: "text-center"
+            paddingX: 20,
+            padding: {
+                top: 10
+            },
+            cols: [
+                {
+                    view: "list",
+                    scroll: false,
+                    borderless: true,
+                    autoheight: true,
+                    css: "custom-list-2",
+                    type: {
+                        height: 50,
+                        template(obj) {
+                            const html =
+                                `
+                                    <div class="list-col-2 semi-bold"> 
+                                        ${obj.customer}
+                                    </div>
+
+                                    <div class="list-col-2 text-right semi-bold"> 
+                                    ${obj.hours} h 
+                                    </div>
+                                `
+                            return html
+                        }
+                    },
+                    data: data2
+                }
+            ]
         },
         {}
     ]
