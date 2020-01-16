@@ -122,8 +122,7 @@ export const invoicesSection = {
                     data: data2
                 }
             ]
-        },
-        
+        },        
         {},
         {
             view: "button",
