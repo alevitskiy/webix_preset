@@ -123,6 +123,7 @@ export const invoicesSection = {
                 }
             ]
         },
+        
         {},
         {
             view: "button",
