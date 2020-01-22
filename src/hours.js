@@ -4,7 +4,7 @@ const data2 = [
     {id: "6.3", customer: "Geoffrey Anderson", hours: "2.5"},
     {id: "6.4", customer: "John Moore", hours: "4"},
     {id: "6.5", customer: "William Thompson", hours: "1"},
-    {id: "6.6", customer: "Jane Clark", hours: ""}
+    {id: "6.6", customer: "Jane Clark", hours: "5"}
 ]
 
 export const hoursSection = {
@@ -53,7 +53,6 @@ export const hoursSection = {
             cols: [
                 {
                     view: "list",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",

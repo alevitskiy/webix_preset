@@ -93,7 +93,6 @@ export const balancesSection = {
             cols: [
                 {
                     view: "list",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",

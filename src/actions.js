@@ -27,6 +27,7 @@ const data = [
 
 export const actionsSection = {
     type: "section",
+    minWidth: 600,
     padding: {
         top: 5,
         bottom: 10
@@ -47,7 +48,6 @@ export const actionsSection = {
             rows: [
                 {
                     view: "grouplist",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     data: data,
@@ -68,7 +68,7 @@ export const actionsSection = {
                                     <strong>${obj.num}</strong>
                                 </span> -  ${obj.value}
                                 `;
-                            }                    
+                            }
                             return html
                         }
                     }

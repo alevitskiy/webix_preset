@@ -42,7 +42,6 @@ export const jobsSection = {
                 },
                 {
                     view: "list",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",
@@ -99,7 +98,6 @@ export const jobsSection = {
             cols: [
                 {
                     view: "list",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",

@@ -7,6 +7,7 @@ const tasks = [
 
 export const assignmentsSection = {
     type: "section",
+    minWidth: 600,
     padding: {
         top: 5
     },
@@ -23,7 +24,7 @@ export const assignmentsSection = {
         },
         {
             view: "scrollview",
-            borderless: "true",
+            borderless: true,
             body: {
                 type: "clean",
                 rows: [
@@ -48,7 +49,6 @@ export const assignmentsSection = {
                         cols: [
                             {
                                 view: "list",
-                                scroll: false,
                                 borderless: true,
                                 autoheight: true,
                                 css: "custom-list-2",

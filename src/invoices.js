@@ -31,6 +31,7 @@ const data2 = [
 
 export const invoicesSection = {
     type: "section",
+    minHeight: 480,
     padding: {
         top: 5
     },
@@ -45,7 +46,6 @@ export const invoicesSection = {
                 },
                 {
                     view: "list",
-                    scroll: false,
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",
@@ -101,7 +101,6 @@ export const invoicesSection = {
             cols: [
                 {
                     view: "list",
-                    scroll: "auto",
                     borderless: true,
                     autoheight: true,
                     css: "custom-list-2",
