@@ -1,4 +1,3 @@
-import "./libs/webix/webix.css";
 import "./libs/fontawesome-free-5.12.0-web/css/all.css";
 
 // CSS
