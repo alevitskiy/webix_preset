@@ -6,8 +6,8 @@ const tasks = [
 ];
 
 export const assignmentsSection = {
-    type: "section",
-    minWidth: 600,
+    // type: "section", // invalid type (that's why background is white), only `template` supports it
+    css:"webix_layout_custom",
     padding: {
         top: 5
     },
@@ -25,6 +25,7 @@ export const assignmentsSection = {
         {
             view: "scrollview",
             borderless: true,
+            scroll:"auto",
             body: {
                 type: "clean",
                 rows: [

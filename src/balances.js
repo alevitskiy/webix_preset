@@ -8,11 +8,13 @@ const data = [
 ]
 
 export const balancesSection = {
-    type: "section",
-    autoheight: true,
+    // type: "section", // invalid type (that's why background is white), only `template` supports it
+    css:"webix_layout_custom",
+    borderless: true,
     padding: {
-        top: 5,
+        top: 5
     },
+    margin:5,
     rows: [
         {
             paddingX: 20,
@@ -25,96 +27,53 @@ export const balancesSection = {
             ]
         },
         {
-            paddingX: 20,
-            padding: {
-                bottom: 15
-            },
-            cols: [
-                {
-                    rows: [
-                        {
-                            view: "label",
-                            label: "$-2,035",
-                            height: 32,
-                            css: "font-18 item-red"
-                        },
-                        {
-                            view: "label",
-                            label: "Total outstanding",
-                            height: 16,
-                            css: "label-secondary uppercase gray"
-                        }
-                    ]
-                },
-                {
-                    rows: [
-                        {
-                            view: "label",
-                            label: "6",
-                            height: 32,
-                            css: "text-right font-18 gray"
-                        },
-                        {
-                            view: "label",
-                            label: "Customers",
-                            height: 16,
-                            css: "text-right label-secondary uppercase gray",
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            rows: [
-                {
-                    css: "list-header",
-                    height: 30,
-                    paddingX: 20,
-                    cols: [
-                        {
-                            template: "Customer",
-                            type: "clean",
-                            css: "gray"
-                        },
-                        {
-                            template: "Amount",
-                            type: "clean",
-                            css: "text-right gray"
-                        }
-                    ]
-                },
-            ]
-        },        
-        {
-            paddingX: 20,
-            padding: {
-                top: 10
-            },
-            cols: [
-                {
-                    view: "list",
-                    borderless: true,
-                    autoheight: true,
-                    css: "custom-list-2",
-                    type: {
-                        height: 40,
-                        template(obj) {
-                            const html =
-                                `
-                <div class="list-col-2 semi-bold"> ${obj.name}</div>
-                <div class="list-col-2 semi-bold text-right">$ - ${obj.amount}</div>
+            template(obj) {
+                const html = `
+                <div class="template-main-panel">
+                    <div style="display:inline-block;">
+                        <div class="font-18 item-red">$${obj.total_outstanding || 0}</div>
+                        <div class="label-secondary uppercase gray">Total outstanding</div>
+                    </div>
+                    <div style="display:inline-block; float:right;">
+                        <div class="text-right font-18 gray">${obj.customers || 0}</div>
+                        <div class="text-right label-secondary uppercase gray">Customers</div>
+                    </div>
+                </div>
                 `
-                            return html
-                        }
-                    },
-                    data: data
-                }
-            ]
+                return html
+            },
+            autoheight:true,
+            borderless:true,
+            data:{
+                customers:6,
+                total_outstanding:"-2,035"
+            }
         },
-        {},
+        {
+            view: "datatable",
+            borderless: true,
+            scroll:"y",
+            css: "custom-table",
+            headerRowHeight:30,
+            rowHeight:40,
+            columns:[
+                { 
+                    id:"name", 
+                    header:{ text:"Customer", css:"table-gray-header uppercase" },
+                    fillspace:true,
+                    css:"semi-bold"
+                },
+                { 
+                    id:"amount", 
+                    header:{ text:"Amount", css:"text-right table-gray-header uppercase" },
+                    css:"text-right semi-bold"
+
+                }
+            ],
+            data: data
+        },
         {
             view: "button",
-            type: "icon",
             label: "<span>View All Customers</span><span class='webix_icon wxi-angle-right'></span>",
             css: "webix_transparent"
         }
