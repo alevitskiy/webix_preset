@@ -28,7 +28,7 @@ webix.ready(() => {
                 cols: [
                     {
                         view: "label",
-                        label: "Activities of  the day",
+                        label: "Activities of the day",
                         css: "font-16"
                     },
                     {
