@@ -40,20 +40,18 @@ module.exports = {
 
 	module: {
 		rules: [{
-			test: /\.js$/,
-			loader: "babel-loader",
-			exclude: /(node_modules|libs)/
-		}, {
 			test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
 			loader: "file-loader",
 			options: {
-				name: "[name].[ext]"
+				name: "[name].[ext]",
+				outputPath: `${PATHS.assets}fonts/vendor/`
 			}
 		}, {
 			test: /\.(png|jpg|gif|svg)$/,
 			loader: "file-loader",
 			options: {
-				name: "[name].[ext]"
+				name: "[name].[ext]",
+				outputPath: `${PATHS.assets}img/vendor/`
 			}
 		}, {
 			test: /\.less$/,
@@ -110,10 +108,6 @@ module.exports = {
 	},
 
 	plugins: [
-		new webpack.ProvidePlugin({
-			webix: `${PATHS.src}/libs/webix/webix`
-		}),
-
 		new MiniCssExtractPlugin({
 			filename: `${PATHS.assets}css/[name].[hash].css`
 		}),
@@ -131,4 +125,3 @@ module.exports = {
 		])
 	]
 };
-
