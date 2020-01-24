@@ -30,7 +30,8 @@ const data2 = [
 ]
 
 export const invoicesSection = {
-    type: "section",
+    // type: "section", // invalid type (that's why background is white), only `template` supports it
+    css:"webix_layout_custom",
     minHeight: 480,
     padding: {
         top: 5

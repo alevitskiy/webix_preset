@@ -27,7 +27,8 @@ const data2 = [
 ]
 
 export const jobsSection = {
-    type: "section",
+    // type: "section", // invalid type (that's why background is white), only `template` supports it
+    css:"webix_layout_custom",
     padding: {
         top: 5
     },

@@ -12,6 +12,7 @@
     text-align: center;
 }
 
+.uppercase,
 .uppercase .webix_el_box{
     text-transform: uppercase;
 }
@@ -118,4 +119,34 @@
 
 .webix_el_icon .webix_disabled{
     cursor: default;
+}
+
+.webix_view.webix_layout_custom {
+    background-color: #fff;
+}
+
+.template-main-panel {
+    padding:10px;
+    font-weight: 500;
+}
+
+.custom-table .webix_column>div, 
+.custom-table .webix_table_cell {
+    padding: 0 20px;
+    border-bottom: 1px solid transparent;
+}
+
+.custom-table .webix_hcell.table-gray-header {
+    color: #818181;
+    background-color: #f0f1f3;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0 20px;
+}
+
+.custom-table .webix_ss_header td.webix_last_row,
+.custom-table div.webix_ss_vscroll_header {
+    background-color: #f0f1f3;
+    border-bottom: 1px solid transparent;    
+    border-left: 1px solid transparent;
 }

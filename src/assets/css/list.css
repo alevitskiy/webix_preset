@@ -17,6 +17,11 @@
     letter-spacing: 0;
 }
 
+.list-item-overall {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .list-item-icon{
     display: inline-block;
     width: 30px;
