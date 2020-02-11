@@ -41,7 +41,6 @@ webix.ready(() => {
             },
             {
                 margin: 20,
-                minHeight:200,
                 cols: [
                     actionsSection,
                     assignmentsSection

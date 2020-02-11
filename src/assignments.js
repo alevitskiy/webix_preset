@@ -6,7 +6,6 @@ const tasks = [
 ];
 
 export const assignmentsSection = {
-    // type: "section", // invalid type (that's why background is white), only `template` supports it
     css:"webix_layout_custom",
     padding: {
         top: 5
@@ -54,10 +53,10 @@ export const assignmentsSection = {
                                 autoheight: true,
                                 css: "custom-list-2",
                                 type: {
-                                    height: 50,
+                                    height: 55,
                                     template(obj) {
                                         const html = `
-                    <div class="list-col-3 ${obj.css}"><span class="list-icon-check"><i class="fas fa-check"></i></span> <span '>${obj.task}</span></div> 
+                    <div class="list-col-3 ${obj.css}"><div class="first-col"><span class="list-icon-check"><i class="fas fa-check"></i></span> <span>${obj.task}</span></div> </div>
                     <div class="list-col-3 ${obj.css}">${obj.description}</div>
                     <div class="list-col-3 ${obj.css}">${obj.unscheduled}</div>
                     `
@@ -67,8 +66,7 @@ export const assignmentsSection = {
                                 data: tasks
                             }
                         ]
-                    },
-                    {}
+                    }
                 ]
             }
         }

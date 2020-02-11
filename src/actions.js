@@ -26,15 +26,15 @@ const data = [
 ]
 
 export const actionsSection = {
-    // type: "section", // invalid type (that's why background is white), only `template` supports it
     css:"webix_layout_custom",
     padding: {
         top: 5,
-        bottom: 10
     },
     rows: [
         {
-            paddingX: 20,
+            padding: {
+                left: 20
+            },
             rows: [
                 {
                     view: "label",
@@ -44,12 +44,14 @@ export const actionsSection = {
             ]
         },
         {
-            paddingX: 10,
+            padding: {
+                left: 10
+            },
             rows: [
                 {
                     view: "grouplist",
                     borderless: true,
-                    scroll:"auto",
+                    scroll: "y",
                     data: data,
                     css: "custom-list",
                     item: {
@@ -75,6 +77,6 @@ export const actionsSection = {
                 }
             ]
         }
-    ],
+    ]
 }
 

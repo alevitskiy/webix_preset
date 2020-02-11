@@ -1,20 +1,19 @@
 const data = [
-    { id: "3.1", name: "Alex Smith", amount: "497" },
-    { id: "3.2", name: "Henry Jones", amount: "189" },
-    { id: "3.3", name: "Geoffrey Anderson", amount: "421" },
-    { id: "3.4", name: "John Moore", amount: "231" },
-    { id: "3.5", name: "William Thompson", amount: "562" },
-    { id: "3.6", name: "Jane Clark", amount: "135" }
+    { id: "3.1", name: "Alex Smith", amount: "$-497" },
+    { id: "3.2", name: "Henry Jones", amount: "$-189" },
+    { id: "3.3", name: "Geoffrey Anderson", amount: "$-421" },
+    { id: "3.4", name: "John Moore", amount: "$-231" },
+    { id: "3.5", name: "William Thompson", amount: "$-562" },
+    { id: "3.6", name: "Jane Clark", amount: "$-135" }
 ]
 
 export const balancesSection = {
-    // type: "section", // invalid type (that's why background is white), only `template` supports it
     css:"webix_layout_custom",
     borderless: true,
+    minWidth: 230,
     padding: {
         top: 5
     },
-    margin:5,
     rows: [
         {
             paddingX: 20,

@@ -23,12 +23,12 @@ const data = [
 ]
 
 const data2 = [
-    { id: "5.1.1", customer: "Alex Smith", hours: "1" },
+    { id: "5.1.1", customer: "Alex Smith", hours: "1 h" },
 ]
 
 export const jobsSection = {
-    // type: "section", // invalid type (that's why background is white), only `template` supports it
     css:"webix_layout_custom",
+    minWidth: 230,
     padding: {
         top: 5
     },
@@ -70,59 +70,28 @@ export const jobsSection = {
             ]
         },
         {
-            rows: [
-                {
-                    css: "list-header",
-                    height: 30,
-                    paddingX: 20,
-                    cols: [
-                        {
-                            template: "Customer",
-                            type: "clean",
-                            css: "gray"
-                        },
-                        {
-                            template: "Amount/time",
-                            type: "clean",
-                            css: "text-right gray"
-                        }
-                    ]
+            view: "datatable",
+            borderless: true,
+            scroll:"y",
+            css: "custom-table",
+            headerRowHeight:30,
+            rowHeight: 45,
+            columns:[
+                { 
+                    id:"customer", 
+                    header:{ text:"Customer", css:"table-gray-header uppercase" },
+                    fillspace:true,
+                    css:"semi-bold"
+                },
+                { 
+                    id:"hours", 
+                    header:{ text:"Amount/Time", css:"text-right table-gray-header uppercase" },
+                    fillspace:true,
+                    css:"text-right semi-bold"
                 }
-
-            ]
+            ],
+            data: data2
         },
-        {
-            paddingX: 20,
-            padding: {
-                top: 10
-            },
-            cols: [
-                {
-                    view: "list",
-                    borderless: true,
-                    autoheight: true,
-                    css: "custom-list-2",
-                    type: {
-                        height: 50,
-                        template(obj) {
-                            const html =
-                                `
-                                    <div class="list-col-2 semi-bold"> 
-                                        ${obj.customer}
-                                    </div>
-
-                                    <div class="list-col-2 text-right semi-bold"> 
-                                    ${obj.hours} h 
-                                    </div>
-                                `
-                            return html
-                        }
-                    },
-                    data: data2
-                }
-            ]
-        },
-        {},
         {
             view: "button",
             type: "icon",

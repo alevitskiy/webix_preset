@@ -30,9 +30,9 @@ const data2 = [
 ]
 
 export const invoicesSection = {
-    // type: "section", // invalid type (that's why background is white), only `template` supports it
     css:"webix_layout_custom",
-    minHeight: 480,
+    minHeight:  400,
+    minWidth: 230,
     padding: {
         top: 5
     },
@@ -72,58 +72,37 @@ export const invoicesSection = {
                     data: data,
                 },
             ]
-        },        
+        }, 
         {
-            rows: [
-                {
-                    css: "list-header",
-                    height: 30,
-                    paddingX: 20,
-                    cols: [
-                        {
-                            template: "Customer",
-                            type: "clean",
-                            css: "gray"
-                        },
-                        {
-                            template: "Amount/time",
-                            type: "clean",
-                            css: "text-right gray"
-                        }
-                    ]
-                }
-            ]
-        },
-        {
-            paddingX: 20,
-            padding: {
-                top: 10
-            },
-            cols: [
-                {
-                    view: "list",
-                    borderless: true,
-                    autoheight: true,
-                    css: "custom-list-2",
-                    type: {
-                        height: 50,
-                        template(obj) {
-                            const html =
-                                `
-        <div class="list-col-2 semi-bold"> ${obj.customer}</div>
-        <div class="list-col-2 text-right">
-        <div class="semi-bold">$ ${obj.sum}</div>
-        <div style="padding-top:5px">${obj.ago} months ago</div>
-        </div>
-        `
-                            return html
-                        }
+            view: "datatable",
+            borderless: true,
+            scroll:"y",
+            css: "custom-table",
+            headerRowHeight:30,
+            rowHeight: 45,
+            columns:[
+                { 
+                    id:"customer", 
+                    header:{ text:"Customer", css:"table-gray-header uppercase" },
+                    fillspace:true,
+                    css:"semi-bold"
+                },
+                { 
+                    id:"sum", 
+                    header:{ text:"Amount/Time", css:"text-right table-gray-header uppercase" },
+                    template(obj){
+                        const html = `
+                        <div class="semi-bold">$ ${obj.sum}</div>
+                        <div> ${obj.ago} months ago</div>
+                        `
+                        return html
                     },
-                    data: data2
+                    fillspace:true,
+                    css:"text-right"
                 }
-            ]
-        },        
-        {},
+            ],
+            data: data2
+        },
         {
             view: "button",
             type: "icon",
