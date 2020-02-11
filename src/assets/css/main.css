@@ -126,7 +126,8 @@
 }
 
 .template-main-panel {
-    padding: 0 10px 5px;
+    padding-bottom: 10px;
+    padding-top: 3px;
     font-weight: 500;
 }
 
@@ -151,4 +152,28 @@
     background-color: #f0f1f3;
     border-bottom: 1px solid transparent;    
     border-left: 1px solid transparent;
+}
+
+.custom-table-clean .webix_column>div, 
+.custom-table-clean .webix_table_cell, 
+.custom-table-clean .webix_hcell {
+    padding-left: 20px;
+    border-bottom: 1px solid transparent;
+}
+
+.custom-table-clean .webix_hcell.header-multiline {
+    white-space: normal;
+    line-height:15px !important;
+    padding-top:12px;
+}
+
+.custom-table-clean .webix_ss_header td.webix_last_row,
+.custom-table-clean div.webix_ss_vscroll_header {
+    background-color: #fff;
+    border-bottom: 1px solid transparent;    
+    border-left: 1px solid transparent;
+}
+.custom-table-clean .webix_cell {
+    white-space: normal;
+    padding-top:12px;
 }

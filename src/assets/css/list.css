@@ -41,7 +41,8 @@
     line-height: 30px;
 }
 
-.list-header .webix_template{    
+.list-header .webix_template{ 
+    padding-left: 20px;
     font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
@@ -75,6 +76,7 @@
 
 .first-col{
     display: flex;
+    padding-left:20px;
 }
 
 .list-icon-check i{
@@ -91,4 +93,12 @@
 
     color: #fff;
     background-color: #52c083;
+}
+
+.list-label {
+    padding-left:20px;
+}
+
+.list-item-round {
+    padding-left:10px;
 }

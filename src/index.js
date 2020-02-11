@@ -14,9 +14,8 @@ import {hoursSection} from "./hours.js";
 
 webix.ready(() => {
 
-    // available with Webix Pro
-    // if (!webix.env.touch && webix.env.scrollSize)
-    //     webix.CustomScroll.init();
+    if (!webix.env.touch && webix.env.scrollSize)
+        webix.CustomScroll.init();
 
     webix.ui({
         padding: 10,
