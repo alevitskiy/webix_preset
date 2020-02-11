@@ -15,14 +15,10 @@ export const hoursSection = {
     },
     rows: [
         {
-            paddingX: 20,
-            rows: [
-                {
-                    view: "label",
-                    height: 50,
-                    label: "Today's hours"
-                }
-            ]
+            view: "label",
+            height: 50,
+            label: "Today's hours",
+            css:"list-label"
         },
         {
             view: "datatable",

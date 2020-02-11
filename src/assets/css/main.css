@@ -126,7 +126,8 @@
 }
 
 .template-main-panel {
-    padding: 0 10px 5px;
+    padding-bottom: 10px;
+    padding-top: 3px;
     font-weight: 500;
 }
 

@@ -16,37 +16,38 @@ export const balancesSection = {
     },
     rows: [
         {
-            paddingX: 20,
-            rows: [
+            paddingX:20,
+            rows:[
                 {
                     view: "label",
                     height: 50,
-                    label: "Outstanding balances"
+                    label: "Outstanding balances",
+                },
+                {
+                    template(obj) {
+                        const html = `
+                        <div class="template-main-panel">
+                            <div style="display:inline-block;">
+                                <div class="font-18 item-red">$${obj.total_outstanding || 0}</div>
+                                <div class="label-secondary uppercase gray">Total outstanding</div>
+                            </div>
+                            <div style="display:inline-block; float:right;">
+                                <div class="text-right font-18 gray">${obj.customers || 0}</div>
+                                <div class="text-right label-secondary uppercase gray">Customers</div>
+                            </div>
+                        </div>
+                        `
+                        return html
+                    },
+                    autoheight:true,
+                    borderless:true,
+                    type:"clean",
+                    data:{
+                        customers:6,
+                        total_outstanding:"-2,035"
+                    }
                 }
             ]
-        },
-        {
-            template(obj) {
-                const html = `
-                <div class="template-main-panel">
-                    <div style="display:inline-block;">
-                        <div class="font-18 item-red">$${obj.total_outstanding || 0}</div>
-                        <div class="label-secondary uppercase gray">Total outstanding</div>
-                    </div>
-                    <div style="display:inline-block; float:right;">
-                        <div class="text-right font-18 gray">${obj.customers || 0}</div>
-                        <div class="text-right label-secondary uppercase gray">Customers</div>
-                    </div>
-                </div>
-                `
-                return html
-            },
-            autoheight:true,
-            borderless:true,
-            data:{
-                customers:6,
-                total_outstanding:"-2,035"
-            }
         },
         {
             view: "datatable",
