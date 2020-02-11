@@ -32,8 +32,8 @@ export const assignmentsSection = {
             headerRowHeight:50,
             columns:[
                 { 
-                    template:`<span class="list-icon-check"><i class="fas fa-check"></i></span>`,
-                    header:`<span class="list-icon-check"><i class="fas fa-check"></i></span>`,
+                    template:`<span class="list-icon-check"><i class="mdi mdi-check"></i></span>`,
+                    header:`<span class="list-icon-check"><i class="mdi mdi-check"></i></span>`,
                     css:"cell-icon-pos",
                     width:50
                 },

@@ -1,5 +1,3 @@
-import "./libs/fontawesome-free-5.12.0-web/css/all.css";
-
 // CSS
 import "./assets/css/list.css";
 import "./assets/css/main.css";
