@@ -14,7 +14,7 @@ export const assignmentsSection = {
         {
             view: "label",
             height: 50,
-            label: "Assignements",
+            label: "Assignments",
             css:"list-label"
         },
         {
