@@ -39,9 +39,9 @@ export const balancesSection = {
                         `
                         return html
                     },
+                    type:"clean",
                     autoheight:true,
                     borderless:true,
-                    type:"clean",
                     data:{
                         customers:6,
                         total_outstanding:"-2,035"

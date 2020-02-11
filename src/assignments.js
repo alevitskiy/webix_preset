@@ -1,8 +1,7 @@
 const tasks = [
-    // { id: "1", task: "Task", description: "Description", unscheduled: "Unscheduled/<br>Unassigned", $css: "semi-bold" },
-    { id: "2", task: "Check email notification", description: "Sort all Letters by Importance", unscheduled: "Twice a day", css: "" },
-    { id: "3", task: "Collect documents for business meetings", description: "Request information from an accountant", unscheduled: "Accountant, Lawyer", css: "" },
-    { id: "4", task: "Meeting in conference hall", description: "Take all the necessary information for the meeting", unscheduled: "Secretary", css: "" }
+    { id: "1", task: "Check email notification", description: "Sort all Letters by Importance", unscheduled: "Twice a day", css: "" },
+    { id: "2", task: "Collect documents for business meetings", description: "Request information from an accountant", unscheduled: "Accountant, Lawyer", css: "" },
+    { id: "3", task: "Meeting in conference hall", description: "Take all the necessary information for the meeting", unscheduled: "Secretary", css: "" }
 ];
 
 export const assignmentsSection = {
