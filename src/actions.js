@@ -28,54 +28,41 @@ const data = [
 export const actionsSection = {
     css:"webix_layout_custom",
     padding: {
-        top: 5,
+        top: 5
     },
     rows: [
         {
-            padding: {
-                left: 20
-            },
-            rows: [
-                {
-                    view: "label",
-                    height: 50,
-                    label: "Recomended actions",
-                }
-            ]
+            view: "label",
+            height: 50,
+            label: "Recomended actions",
+            css:"list-label"
         },
         {
-            padding: {
-                left: 10
-            },
-            rows: [
-                {
-                    view: "grouplist",
-                    borderless: true,
-                    scroll: "y",
-                    data: data,
-                    css: "custom-list",
-                    item: {
-                        height: 50,
-                        template(obj) {
-                            var html;        
-                            if(obj.$level != 1){
-                                html = obj.value
-                            } else {
-                                html = `
-                                <span class="${obj.class}">
-                                    <span class="list-item-icon">
-                                        <span class="${obj.icon}"></span> 
-                                    </span>
-                                    
-                                    <strong>${obj.num}</strong>
-                                </span> -  ${obj.value}
-                                `;
-                            }
-                            return html
-                        }
+            view: "grouplist",
+            borderless: true,
+            scroll: "y",
+            data: data,
+            css: "custom-list",
+            item: {
+                height: 50,
+                template(obj) {
+                    var html;        
+                    if(obj.$level != 1){
+                        html = obj.value
+                    } else {
+                        html = `
+                        <span class="list-item-round ${obj.class}">
+                            <span class="list-item-icon">
+                                <span class="${obj.icon}"></span> 
+                            </span>
+                            
+                            <strong>${obj.num}</strong>
+                        </span> -  ${obj.value}
+                        `;
                     }
+                    return html
                 }
-            ]
+            }
         }
     ]
 }
