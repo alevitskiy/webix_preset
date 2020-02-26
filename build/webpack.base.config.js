@@ -20,9 +20,9 @@ module.exports = {
 	},
 
 	output: {
-		filename: `${PATHS.assets}js/[name].[hash].js`,
+		filename: `${PATHS.assets}js/[name].js`,
 		path: PATHS.dist,
-		publicPath: "/" // for server
+		publicPath: ""
 	},
 
 	optimization: {
@@ -109,7 +109,7 @@ module.exports = {
 
 	plugins: [
 		new MiniCssExtractPlugin({
-			filename: `${PATHS.assets}css/[name].[hash].css`
+			filename: `${PATHS.assets}css/[name].css`
 		}),
 
 		new HtmlWebpackPlugin({

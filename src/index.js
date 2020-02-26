@@ -1,14 +1,12 @@
-// CSS
-import "./assets/css/list.css";
-import "./assets/css/main.css";
+import {actionsSection} from "./js/actions";
+import {assignmentsSection} from "./js/assignments";
+import {balancesSection} from "./js/balances";
+import {invoicesSection} from "./js/invoices";
+import {jobsSection} from "./js/jobs";
+import {hoursSection} from "./js/hours";
 
-//JS
-import {actionsSection} from "./actions.js";
-import {assignmentsSection} from "./assignments.js";
-import {balancesSection} from "./balances.js";
-import {invoicesSection} from "./invoices.js";
-import {jobsSection} from "./jobs.js";
-import {hoursSection} from "./hours.js";
+// SCSS
+import "./styles/main.scss";
 
 webix.ready(() => {
 
