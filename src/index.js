@@ -1,57 +1,57 @@
-// CSS
-import "./assets/css/list.css";
-import "./assets/css/main.css";
+import {actionsSection} from "./js/actions";
+import {assignmentsSection} from "./js/assignments";
+import {balancesSection} from "./js/balances";
+import {invoicesSection} from "./js/invoices";
+import {jobsSection} from "./js/jobs";
+import {hoursSection} from "./js/hours";
 
-//JS
-import {actionsSection} from "./actions.js";
-import {assignmentsSection} from "./assignments.js";
-import {balancesSection} from "./balances.js";
-import {invoicesSection} from "./invoices.js";
-import {jobsSection} from "./jobs.js";
-import {hoursSection} from "./hours.js";
+// SCSS
+import "./styles/main.scss";
 
 webix.ready(() => {
+	if (!webix.env.touch && webix.env.scrollSize) {
+		webix.CustomScroll.init();
+	}
 
-    if (!webix.env.touch && webix.env.scrollSize)
-        webix.CustomScroll.init();
-
-    webix.ui({
-        padding: 10,
-        type: "wide",
-        margin: 20,
-        rows: [
-            {
-                cols: [
-                    {
-                        view: "label",
-                        label: "Activities of the day",
-                        css: "font-16"
-                    },
-                    {
-                        view: "button",
-                        width: 150,
-                        align: "right",
-                        css: "webix_primary",
-                        label: "<span>Assignements</span><span class='webix_icon wxi-angle-down'></span>"
-                    }
-                ]
-            },
-            {
-                margin: 20,
-                cols: [
-                    actionsSection,
-                    assignmentsSection
-                ]
-            },
-            {
-                margin: 20,
-                cols: [
-                    balancesSection,
-                    invoicesSection,
-                    jobsSection,
-                    hoursSection
-                ]
-            }
-        ]
-    });
-}); 
+	webix.ui({
+		padding: 10,
+		type: "wide",
+		margin: 20,
+		rows: [
+			{
+				cols: [
+					{
+						view: "template",
+						type: "header",
+						css: "webix_clean font-18",
+						borderless: true,
+						template: "Activities of the day"
+					},
+					{
+						view: "button",
+						width: 150,
+						align: "right",
+						css: "webix_primary",
+						label: "<span>Assignements</span><span class='webix_icon wxi-angle-down'></span>"
+					}
+				]
+			},
+			{
+				margin: 20,
+				cols: [
+					actionsSection,
+					assignmentsSection
+				]
+			},
+			{
+				margin: 20,
+				cols: [
+					balancesSection,
+					invoicesSection,
+					jobsSection,
+					hoursSection
+				]
+			}
+		]
+	});
+});
