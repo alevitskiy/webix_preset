@@ -23,11 +23,11 @@ const data = [
 ];
 
 const data2 = [
-	{ id: "5.1.1", customer: "Alex Smith", hours: "1 h" }
+	{id: "5.1.1", customer: "Alex Smith", hours: "1 h"}
 ];
 
 export const jobsSection = {
-	css:"webix_layout_custom",
+	css: "webix_layout_custom",
 	minWidth: 230,
 	padding: {
 		top: 5
@@ -45,13 +45,13 @@ export const jobsSection = {
 					view: "list",
 					borderless: true,
 					autoheight: true,
-					css: "custom-list-2",
+					css: "list-with-badges",
 					type: {
 						height: 50,
 						template(obj) {
 							const html =
 								`
-		<div class="list-col-2 semi-bold font-16">
+		<div class="list-item-section semi-bold font-16">
 		<div>
 						   $ ${obj.sum}
 		</div>
@@ -60,8 +60,8 @@ export const jobsSection = {
 							${obj.jobs} invoices
 		</div>
 		 </div>
-		<div class="list-col-2 text-right"> <span class="color-item color-${obj.color}"> ${obj.label} </span> </div>
-		`
+		<div class="list-item-section text-right"> <span class="badge color-${obj.color}"> ${obj.label} </span> </div>
+		`;
 							return html;
 						}
 					},
@@ -78,16 +78,16 @@ export const jobsSection = {
 			rowHeight: 45,
 			columns: [
 				{
-					id:"customer", 
-					header:{ text:"Customer", css:"table-gray-header uppercase" },
-					fillspace:true,
-					css:"semi-bold"
+					id: "customer",
+					header: {text: "Customer", css: "table-gray-header uppercase"},
+					fillspace: true,
+					css: "semi-bold"
 				},
 				{
-					id:"hours", 
-					header:{ text:"Amount/Time", css:"text-right table-gray-header uppercase" },
-					fillspace:true,
-					css:"text-right semi-bold"
+					id: "hours",
+					header: {text: "Amount/Time", css: "text-right table-gray-header uppercase"},
+					fillspace: true,
+					css: "text-right semi-bold"
 				}
 			],
 			data: data2
@@ -99,4 +99,4 @@ export const jobsSection = {
 			css: "webix_transparent"
 		}
 	]
-}
+};

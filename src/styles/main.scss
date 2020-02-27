@@ -1,61 +1,66 @@
-@import "list";
 @import "listActions";
 @import "listBadges";
 @import "tableAssignments";
 @import "tableCommon";
 
-
-.semi-bold{
-    font-weight: 500;
-}
-
-.text-right,
-.text-right .webix_el_box{
-    text-align: right;
-}
-
-.text-center,
-.text-center .webix_el_box{
-    text-align: center;
-}
-
-.uppercase,
-.uppercase .webix_el_box{
-    text-transform: uppercase;
-}
-
-.gray,
-.gray .webix_el_box{
-    color: #818181;
-}
-
-.font-16,
-.font-16 .webix_el_box{
-    font-size: 16px;
-}
-
-.font-18,
-.font-18 .webix_el_box{
-    font-size: 18px;
-}
-
-.text-secondary,
-.text-secondary > .webix_el_box{    
-    font-size: 11px;
-    padding-bottom: 0;
-}
-
-.webix_el_icon .webix_disabled{
-    cursor: default;
-}
-
 .webix_view.webix_layout_custom {
     background-color: #fff;
 }
 
-.template-main-panel {
+.header-label {
+    padding-left:20px;
+}
+
+.header-template { 
+    padding-left: 20px;
+    font-size: 12px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #f0f1f3;
+    line-height: 30px;
+
+    &.orange {
+        color: #ff8e80;
+    }
+}
+
+.template-summary {
     padding-bottom: 10px;
     padding-top: 3px;
     font-weight: 500;
 }
 
+// common fonts and colors
+
+.semi-bold{
+    font-weight: 500;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-secondary {    
+    font-size: 11px;
+    padding-bottom: 0;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.gray {
+    color: #818181;
+}
+
+.red {
+    color: #fd4b51;
+}
+
+.font-16 {
+    font-size: 16px;
+}
+
+.font-18 {
+    font-size: 18px;
+}
